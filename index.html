@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Music Player</title>
+</head>
+<body>
+	<div id="app">
+		<p id="header">Mudex</p>
+		<div id='content'>
+			<div id="animation-div">
+				<div id="animation-1">
+					<div>
+						<img src="./woofer.svg" alt="woofer">
+						<p id="audio-title"></p>
+					</div>
+				</div>
+			</div>
+			<div id="playlist" class="showing">
+				<div id="playlist-header">
+					<i class="fas fa-2x"></i>
+					<p>PLAYLIST</p>
+				</div>
+				<div id="playlist-content">
+					<label>
+						<p id="select-music-button">Select Audio <i class="fas"></i></p>
+						<input type="file" id="select-audio" style="display:none" accept=".mp3,audio/*" multiple>
+					</label>
+					<div id="playlist-items">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="controls">
+			<div id="duration">
+				<p id="current-time">0:00</p>
+				<div id="duration-div">
+					<div id="duration-bar">
+						<div id="duration-ball"></div>
+					</div>
+					<p id="hover-duration">
+						03:45
+					</p>
+				</div>
+				<p id="total-time">0:00</p>
+			</div>
+			<div id="control-buttons-div">
+				<div id="control-buttons-left">
+					<div id="toggle-play" class="control-button" title="Pause/Play">
+						<div></div>
+					</div>
+					<div id="prev" class="control-button" title="Previous"><div></div><div></div></div>
+					<div id="stop" class="control-button" title="Stop"><div></div></div>
+					<div id="next" class="control-button" title="Next"><div></div><div></div></div>
+				</div>
+				<div id="control-buttons-right">
+					<div id="speed-control-button" class="control-button" title="Speed">
+						<p id="current-speed">1</p>
+						<section>
+							<p data-speed="0.5">0.5x</p>
+							<p data-speed="1">1x</p>
+							<p data-speed="1.5">1.5x</p>
+							<p data-speed="2">2x</p>
+						</section>
+					</div>
+					<div id="loop-button" class="control-button" title="Loop"><i class="fas fa-lg"></i></div>			
+					<div id="shuffle-button" class="control-button" title="Shuffle"><i class="fas fa-lg"></i></div>
+
+					<div id="volume-button" class="control-button" title="Volume">
+						<i class="fas fa-volume-up fa-lg"></i>
+						<section id="volume-div">
+							<div id="volume-bar">
+							</div>
+							<p id="volume-info">50</p>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script defer src="index.js"></script>
+</body>
+</html>
