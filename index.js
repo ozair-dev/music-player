@@ -306,7 +306,7 @@ durationDiv.onmousemove = (e)=>{
 		hoverDuration.style.setProperty("left", `calc(${percent}% - ${width/2}px)`)
 	}
 }
-durationDiv.onmouseenter = ()=> (tempStorage.durationEntered = true) && (hoverDuration.classList.add('show'));
+durationDiv.onmouseenter = ()=> audio && ((tempStorage.durationEntered = true) && (hoverDuration.classList.add('show')));
 durationDiv.onmouseleave = ()=> !(tempStorage.durationEntered = false) && (hoverDuration.classList.remove('show'));
 
 
